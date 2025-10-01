@@ -49,7 +49,15 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
-    implementation("androidx.core:core-splashscreen:1.0.1")
+
+    //splash
+    implementation(libs.androidx.core.splashscreen)
+
+    //datastore
+    implementation(libs.androidx.datastore.core)
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.androidx.datastore.preferences.core)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
