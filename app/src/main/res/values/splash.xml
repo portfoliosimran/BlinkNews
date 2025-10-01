@@ -3,7 +3,7 @@
     <style name="App.Starting.Theme" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/background</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/app_icon</item>
-        <item name="postSplashScreenTheme">@style/App.Starting.Theme</item>f
+        <item name="postSplashScreenTheme">@style/Theme.BlinkNews</item>f
 
     </style>
 

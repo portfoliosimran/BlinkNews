@@ -2,8 +2,8 @@
 <resources>
     <style name="App.Starting.Theme" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/background</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/img</item>
-        <item name="postSplashScreenTheme">@style/App.Starting.Theme</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/app_icon_night</item>
+        <item name="postSplashScreenTheme">@style/Theme.BlinkNews</item>
 
     </style>
 </resources>

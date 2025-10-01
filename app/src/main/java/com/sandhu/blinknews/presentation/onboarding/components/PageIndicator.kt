@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import com.sandhu.blinknews.presentation.Dimens.IndicatorSize
 
 @Composable
@@ -21,7 +22,7 @@ fun PageIndicator(
     selectedColor: Color = MaterialTheme.colorScheme.primary,
     unselectedColor: Color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.3f)
 ) {
-    Row(modifier = Modifier, horizontalArrangement = Arrangement.SpaceBetween) {
+    Row(modifier = Modifier, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         repeat(pageSize) { page ->
             Box(modifier = Modifier.size(IndicatorSize).clip(CircleShape).background(color = if (page == selectedPage) selectedColor else unselectedColor))
         }
