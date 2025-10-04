@@ -1,4 +1,4 @@
-package com.sandhu.blinknews.domain.usecases
+package com.sandhu.blinknews.domain.usecases.app_entry
 
 data class AppEntryUseCases(
     val readAppEntry: ReadAppEntry,

@@ -26,7 +26,9 @@ import com.sandhu.blinknews.presentation.onboarding.components.PageIndicator
 import kotlinx.coroutines.launch
 
 @Composable
-fun OnBoardingScreen() {
+fun OnBoardingScreen(
+    event: (OnboardingEvent) -> Unit
+) {
     Column(modifier = Modifier.fillMaxSize()) {
         val pagerState = rememberPagerState(0) {
             pages.size
@@ -79,8 +81,8 @@ fun OnBoardingScreen() {
 
                 NewsButton(text = buttonState.value[1], onClick = {
                     scope.launch {
-                        if (pagerState.currentPage == 3) {
-                            // Navigate to the main activity
+                        if (pagerState.currentPage == 2) {
+                            event(OnboardingEvent.SaveAppEntry)
                         } else {
                             pagerState.animateScrollToPage(pagerState.currentPage + 1)
                         }

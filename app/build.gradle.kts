@@ -61,7 +61,16 @@ dependencies {
 
     //hilt
     implementation(libs.androidx.hilt.work)
+    implementation(libs.androidx.hilt.navigation.fragment)
+    implementation(libs.androidx.hilt.navigation.compose)
     kapt(libs.androidx.hilt.compiler)
+
+    //retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    //paging
+    implementation(libs.androidx.paging.common)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

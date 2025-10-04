@@ -1,4 +1,4 @@
-package com.sandhu.blinknews.domain.usecases
+package com.sandhu.blinknews.domain.usecases.app_entry
 
 import com.sandhu.blinknews.domain.manager.LocalUserManager
 import kotlinx.coroutines.flow.Flow
@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 class ReadAppEntry(
     private val localUserManager: LocalUserManager
 ) {
-    suspend operator fun invoke(): Flow<Boolean> {
+    operator fun invoke(): Flow<Boolean> {
         return localUserManager.readAppEntry()
     }
 }

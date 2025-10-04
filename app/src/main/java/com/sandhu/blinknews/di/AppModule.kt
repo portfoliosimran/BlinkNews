@@ -3,9 +3,9 @@ package com.sandhu.blinknews.di
 import android.app.Application
 import com.sandhu.blinknews.data.manager.LocalUserManagerImpl
 import com.sandhu.blinknews.domain.manager.LocalUserManager
-import com.sandhu.blinknews.domain.usecases.AppEntryUseCases
-import com.sandhu.blinknews.domain.usecases.ReadAppEntry
-import com.sandhu.blinknews.domain.usecases.SaveAppEntry
+import com.sandhu.blinknews.domain.usecases.app_entry.AppEntryUseCases
+import com.sandhu.blinknews.domain.usecases.app_entry.ReadAppEntry
+import com.sandhu.blinknews.domain.usecases.app_entry.SaveAppEntry
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

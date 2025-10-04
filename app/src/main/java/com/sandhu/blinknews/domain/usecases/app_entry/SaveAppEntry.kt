@@ -1,4 +1,4 @@
-package com.sandhu.blinknews.domain.usecases
+package com.sandhu.blinknews.domain.usecases.app_entry
 
 import com.sandhu.blinknews.domain.manager.LocalUserManager
 
