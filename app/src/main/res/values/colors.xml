@@ -12,4 +12,6 @@
     <!-- Text -->
     <color name="textPrimary">#212121</color>
     <color name="textSecondary">#757575</color>
+
+    <color name="shimmer">#C3C3C3</color>
 </resources>
