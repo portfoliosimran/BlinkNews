@@ -20,15 +20,20 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     val viewModel by viewModels<MainViewModel>()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        installSplashScreen().setKeepOnScreenCondition {
-            viewModel.splashCondition
+        installSplashScreen().apply {
+            setKeepOnScreenCondition {
+                viewModel.splashCondition
+            }
         }
-        //enableEdgeToEdge()
         setContent {
             BlinkNewsTheme {
+                Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
+                    val startDestination = viewModel.startDestination
+                    NavGraph(startDestination = startDestination)
+                }
+
                 enableEdgeToEdge(
                     statusBarStyle = SystemBarStyle.light(
                         Color.Transparent.hashCode(),
@@ -39,10 +44,6 @@ class MainActivity : ComponentActivity() {
                         Color.Transparent.hashCode()
                     )
                 )
-                Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
-                    val startDestination = viewModel.startDestination
-                    NavGraph(startDestination = startDestination)
-                }
             }
         }
     }

@@ -18,10 +18,13 @@ import androidx.paging.compose.LazyPagingItems
 import com.sandhu.blinknews.domain.model.Article
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.size.Scale
 import com.sandhu.blinknews.R
 import com.sandhu.blinknews.presentation.Dimens.MediumPadding1
 import com.sandhu.blinknews.presentation.common.ArticlesList
@@ -60,6 +63,7 @@ fun HomeScreen(articles: LazyPagingItems<Article>, navigate: (String) -> Unit) {
         Spacer(modifier = Modifier.height(MediumPadding1))
 
         SearchBar(
+            modifier = Modifier.padding(horizontal = MediumPadding1),
             text = "",
             onValueChange = { },
             readOnly = true,

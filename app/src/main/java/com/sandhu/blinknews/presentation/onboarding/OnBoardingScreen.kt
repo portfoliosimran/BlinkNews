@@ -66,7 +66,9 @@ fun OnBoardingScreen(
 
 
             Row(verticalAlignment = Alignment.CenterVertically) {
+
                 val scope = rememberCoroutineScope()
+
                 if (buttonState.value[0].isNotEmpty()) {
                     NewsTextButton(
                         text = buttonState.value[0],

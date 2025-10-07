@@ -11,6 +11,8 @@ import com.sandhu.blinknews.presentation.home.HomeScreen
 import com.sandhu.blinknews.presentation.home.HomeViewModel
 import com.sandhu.blinknews.presentation.onboarding.OnBoardingScreen
 import com.sandhu.blinknews.presentation.onboarding.OnBoardingViewModel
+import com.sandhu.blinknews.presentation.search.SearchScreen
+import com.sandhu.blinknews.presentation.search.SearchViewModel
 
 @Composable
 fun NavGraph(
@@ -43,10 +45,9 @@ fun NavGraph(
             ){
                 val viewModel: HomeViewModel = hiltViewModel()
                 val articles = viewModel.news.collectAsLazyPagingItems()
-                HomeScreen(
-                    articles = articles,
-                    navigate = {}
-                )
+                HomeScreen(articles = articles, navigate = { })
+                /*val viewModel: SearchViewModel = hiltViewModel()
+                SearchScreen(state = viewModel.state.value, event = viewModel::onEvent, navigate = { })*/
             }
         }
     }

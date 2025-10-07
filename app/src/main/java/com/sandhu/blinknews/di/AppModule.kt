@@ -11,6 +11,7 @@ import com.sandhu.blinknews.domain.usecases.app_entry.ReadAppEntry
 import com.sandhu.blinknews.domain.usecases.app_entry.SaveAppEntry
 import com.sandhu.blinknews.domain.usecases.news.GetNews
 import com.sandhu.blinknews.domain.usecases.news.NewsUseCases
+import com.sandhu.blinknews.domain.usecases.news.SearchNews
 import com.sandhu.blinknews.util.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
@@ -61,7 +62,8 @@ object AppModule {
         newsRepository: NewsRepository
     ): NewsUseCases{
         return NewsUseCases(
-            getNews = GetNews(newsRepository)
+            getNews = GetNews(newsRepository),
+            searchNews = SearchNews(newsRepository)
         )
     }
 
