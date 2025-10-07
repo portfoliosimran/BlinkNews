@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.sandhu.blinknews.domain.usecases.app_entry.AppEntryUseCases
 import com.sandhu.blinknews.presentation.nvgraph.Route
 import dagger.hilt.android.lifecycle.HiltViewModel
-import jakarta.inject.Inject
+import javax.inject.Inject
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
@@ -16,7 +16,7 @@ import kotlinx.coroutines.flow.onEach
 @HiltViewModel
 class MainViewModel @Inject constructor(
     private val appEntryUseCases: AppEntryUseCases
-) : ViewModel() {
+): ViewModel() {
 
     var splashCondition by mutableStateOf(true)
         private set

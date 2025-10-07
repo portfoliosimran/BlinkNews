@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -21,24 +20,20 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.sandhu.blinknews.R
 import com.sandhu.blinknews.domain.model.Article
 import com.sandhu.blinknews.domain.model.Source
-import com.sandhu.blinknews.presentation.Dimens
 import com.sandhu.blinknews.presentation.Dimens.ArticleCardSize
 import com.sandhu.blinknews.presentation.Dimens.ExtraSmallPadding
 import com.sandhu.blinknews.presentation.Dimens.ExtraSmallPadding2
 import com.sandhu.blinknews.presentation.Dimens.SmallIconSize
 import com.sandhu.blinknews.ui.theme.BlinkNewsTheme
-import org.intellij.lang.annotations.JdkConstants
 
 @Composable
 fun ArticleCard(

@@ -1,7 +1,6 @@
 package com.sandhu.blinknews.di
 
 import android.app.Application
-import com.google.gson.GsonBuilder
 import com.sandhu.blinknews.data.manager.LocalUserManagerImpl
 import com.sandhu.blinknews.data.remote.NewsApi
 import com.sandhu.blinknews.data.repository.NewsRepositoryImpl
@@ -17,7 +16,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import jakarta.inject.Singleton
+import javax.inject.Singleton
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

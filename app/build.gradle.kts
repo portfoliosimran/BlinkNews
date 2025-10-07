@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.dagger.hilt.android)
     kotlin("kapt")
 }
 
@@ -60,10 +61,16 @@ dependencies {
     implementation(libs.androidx.datastore.preferences.core)
 
     //hilt
+    implementation(libs.androidx.work.runtime.ktx)
     implementation(libs.androidx.hilt.work)
-    implementation(libs.androidx.hilt.navigation.fragment)
+    //implementation(libs.androidx.hilt.navigation.fragment)
     implementation(libs.androidx.hilt.navigation.compose)
     kapt(libs.androidx.hilt.compiler)
+    kapt(libs.hilt.compiler)
+    implementation(libs.hilt.android)
+
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
+
 
     //retrofit
     implementation(libs.retrofit)
@@ -71,6 +78,7 @@ dependencies {
 
     //paging
     implementation(libs.androidx.paging.common)
+    implementation(libs.androidx.paging.compose)
 
     //Coil
     implementation(libs.coil.compose)

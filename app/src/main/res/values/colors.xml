@@ -13,5 +13,11 @@
     <color name="textPrimary">#212121</color>
     <color name="textSecondary">#757575</color>
 
+    <color name="body">#4E4B66</color>
+
     <color name="shimmer">#C3C3C3</color>
+
+    <color name="input_background">#ffffff</color>
+
+    <color name="placeholder">#A0A3BD</color>
 </resources>

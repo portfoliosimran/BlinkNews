@@ -27,7 +27,7 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun OnBoardingScreen(
-    event: (OnboardingEvent) -> Unit
+    onEvent: (OnboardingEvent) -> Unit
 ) {
     Column(modifier = Modifier.fillMaxSize()) {
         val pagerState = rememberPagerState(0) {
@@ -40,7 +40,6 @@ fun OnBoardingScreen(
                     1 -> listOf("Back", "Next")
                     2 -> listOf("Back", "Get Started")
                     else -> listOf("", "")
-
                 }
             }
         }
@@ -82,9 +81,11 @@ fun OnBoardingScreen(
                 NewsButton(text = buttonState.value[1], onClick = {
                     scope.launch {
                         if (pagerState.currentPage == 2) {
-                            event(OnboardingEvent.SaveAppEntry)
+                            onEvent(OnboardingEvent.SaveAppEntry)
                         } else {
-                            pagerState.animateScrollToPage(pagerState.currentPage + 1)
+                            pagerState.animateScrollToPage(
+                                page = pagerState.currentPage + 1
+                            )
                         }
                     }
                 })

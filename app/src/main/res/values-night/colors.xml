@@ -12,4 +12,12 @@
     <!-- Text -->
     <color name="textPrimary">#FFFFFF</color>
     <color name="textSecondary">#BDBDBD</color>
+
+    <color name="body">#4E4B66</color>
+
+    <color name="shimmer">#C3C3C3</color>
+
+    <color name="input_background">#fff</color>
+
+    <color name="placeholder">#A0A3BD</color>
 </resources>
