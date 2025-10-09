@@ -28,6 +28,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.sandhu.blinknews.R
 import com.sandhu.blinknews.presentation.Dimens.IconSize
+import com.sandhu.blinknews.presentation.nvgraph.Route
 import com.sandhu.blinknews.ui.theme.BlinkNewsTheme
 
 @Composable
@@ -37,22 +38,20 @@ fun SearchBar(
     readOnly: Boolean,
     onClick: (() -> Unit)? = null,
     onValueChange: (String) -> Unit,
-    onSearch: () -> Unit
+    onSearch: () -> Unit,
 ) {
 
     val interactionSource = remember {
         MutableInteractionSource()
     }
     val isClicked = interactionSource.collectIsPressedAsState().value
-    LaunchedEffect(
-        key1 = isClicked,
-    ) {
+    LaunchedEffect(key1 = isClicked) {
         if (isClicked) {
             onClick?.invoke()
         }
     }
 
-    Box(modifier = Modifier) {
+    Box(modifier = modifier) {
 
         TextField(
             modifier = Modifier
@@ -119,7 +118,12 @@ fun Modifier.searchBarBorder() = composed {
 @Composable
 private fun SearchBarPreview() {
     BlinkNewsTheme {
-        SearchBar(text = "", readOnly = false, onValueChange = {}, onSearch = {})
-
+        SearchBar(
+            text = "",
+            readOnly = false,
+            onValueChange = {},
+            onSearch = {},
+            onClick = {}
+        )
     }
 }
