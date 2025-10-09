@@ -7,8 +7,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
 import androidx.paging.compose.collectAsLazyPagingItems
-import com.sandhu.blinknews.domain.model.Article
-import com.sandhu.blinknews.presentation.details.DetailsScreen
 import com.sandhu.blinknews.presentation.home.HomeScreen
 import com.sandhu.blinknews.presentation.home.HomeViewModel
 import com.sandhu.blinknews.presentation.onboarding.OnBoardingScreen

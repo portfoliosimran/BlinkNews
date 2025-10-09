@@ -28,7 +28,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.sandhu.blinknews.R
 import com.sandhu.blinknews.presentation.Dimens.IconSize
-import com.sandhu.blinknews.presentation.nvgraph.Route
 import com.sandhu.blinknews.ui.theme.BlinkNewsTheme
 
 @Composable

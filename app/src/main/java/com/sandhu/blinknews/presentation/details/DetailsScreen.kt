@@ -1,8 +1,6 @@
 package com.sandhu.blinknews.presentation.details
 
 import android.content.Intent
-import android.content.res.Configuration.UI_MODE_NIGHT_YES
-import android.net.Uri
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Spacer
@@ -16,14 +14,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.sandhu.blinknews.domain.model.Article
 import com.sandhu.blinknews.presentation.details.components.DetailTopBar
-import com.sandhu.blinknews.presentation.nvgraph.Route
 import androidx.core.net.toUri
 import coil.compose.AsyncImage
 import coil.request.ImageRequest

@@ -77,10 +77,10 @@ fun DetailsTopBarPreview() {
 
         Box(modifier = Modifier.background(MaterialTheme.colorScheme.background)){
             DetailTopBar(
-                onBrowsingClick = { /*TODO*/ },
-                onShareClick = { /*TODO*/ },
-                onBookmarkClick = { /*TODO*/ },
-                onBackClick = { /*TODO*/ }
+                onBrowsingClick = {  },
+                onShareClick = {  },
+                onBookmarkClick = {  },
+                onBackClick = {  }
             )
         }
 
