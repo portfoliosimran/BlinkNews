@@ -19,6 +19,7 @@ composeBom = "2024.09.00"
 datastoreCore = "1.1.7"
 datastorePreferencesCore = "1.1.7"
 retrofit = "3.0.0"
+room = "2.8.2"
 pagingCommon = "3.3.6"
 pagingCompose = "3.3.6"
 workRuntime = "2.9.0"
@@ -56,6 +57,9 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 androidx-paging-common = { group = "androidx.paging", name = "paging-common", version.ref = "pagingCommon" }
 androidx-paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "pagingCompose" }
 androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntime" }
+androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

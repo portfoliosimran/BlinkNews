@@ -1,5 +1,6 @@
 package com.sandhu.blinknews.presentation.home
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Column
@@ -22,6 +23,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.sandhu.blinknews.R
 import com.sandhu.blinknews.presentation.Dimens.MediumPadding1
 import com.sandhu.blinknews.presentation.common.ArticlesList
@@ -91,7 +93,9 @@ fun HomeScreen(
         ArticlesList(
             modifier = Modifier.padding(horizontal = MediumPadding1),
             articles = articles,
-            onClick = { navigate(Route.DetailsScreen.route) }
+            onClick = {
+                    article -> navigate(Route.DetailsScreen.route)
+            }
         )
     }
 }

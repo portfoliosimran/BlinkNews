@@ -1,6 +1,10 @@
 package com.sandhu.blinknews.di
 
 import android.app.Application
+import androidx.room.Room
+import com.sandhu.blinknews.data.local.NewsDao
+import com.sandhu.blinknews.data.local.NewsDatabase
+import com.sandhu.blinknews.data.local.NewsTypeConvertor
 import com.sandhu.blinknews.data.manager.LocalUserManagerImpl
 import com.sandhu.blinknews.data.remote.NewsApi
 import com.sandhu.blinknews.data.repository.NewsRepositoryImpl
@@ -13,6 +17,7 @@ import com.sandhu.blinknews.domain.usecases.news.GetNews
 import com.sandhu.blinknews.domain.usecases.news.NewsUseCases
 import com.sandhu.blinknews.domain.usecases.news.SearchNews
 import com.sandhu.blinknews.util.Constants.BASE_URL
+import com.sandhu.blinknews.util.Constants.NEWS_DATABASE
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -67,5 +72,26 @@ object AppModule {
         )
     }
 
+    @Provides
+    @Singleton
+    fun provideNewsDatabase(
+        application: Application
+    ): NewsDatabase {
+        return Room.databaseBuilder(
+            context = application,
+            klass = NewsDatabase::class.java,
+            name = "news_db"
+        ).addTypeConverter(typeConverter = NewsTypeConvertor())
+            .fallbackToDestructiveMigration(dropAllTables = false)
+            .build()
+    }
+
+    @Provides
+    @Singleton
+    fun provideNewsDao(
+        newsDatabase: NewsDatabase
+    ): NewsDao = newsDatabase.dao
+
 
 }
+

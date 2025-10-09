@@ -7,6 +7,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navigation
 import androidx.paging.compose.collectAsLazyPagingItems
+import com.sandhu.blinknews.domain.model.Article
+import com.sandhu.blinknews.presentation.details.DetailsScreen
 import com.sandhu.blinknews.presentation.home.HomeScreen
 import com.sandhu.blinknews.presentation.home.HomeViewModel
 import com.sandhu.blinknews.presentation.onboarding.OnBoardingScreen
@@ -66,6 +68,24 @@ fun NavGraph(
                         navController.navigate(route)
                     }
                 )
+            }
+
+            composable(
+                route = Route.DetailsScreen.route
+            ) { backStackEntry ->
+                // Retrieve the article from previous back stack entry
+                val article = navController.previousBackStackEntry
+                    ?.savedStateHandle
+                    ?.get<Article>("article")
+
+                if (article != null) {
+                    //val viewModel: DetailsViewModel = hiltViewModel() // if you have one
+                    DetailsScreen(
+                        article = article,
+                        event = { /* handle events */ },
+                        navigateUp = { navController.navigateUp() }
+                    )
+                }
             }
         }
 
